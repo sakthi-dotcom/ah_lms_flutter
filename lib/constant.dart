@@ -1,0 +1,12 @@
+const String appName = "LMS";
+const String bgimage = "assets/title.png";
+const String title = "LMS";
+const String slogan = "Welcome Back";
+const String reg_title = "Sign up";
+const String log_title = "Sign in";
+const String name = "Name";
+const String password = "Password";
+const String mail = "Email";
+const String routeSignin = "Already have an account?";
+const String routeSignup = "Doesn't have an account?";
+const String forgot_pass = "Forgot password";
