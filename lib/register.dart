@@ -21,7 +21,7 @@ class _RegisterState extends State<Register> {
     super.initState();
     passwordVisible = true;
   }
-  //creating global key uniqly identify the form widget,form key allows validate the form
+  //creating global key uniquely identify the form widget,form key allows validate the form
   GlobalKey<FormState> _formKey =   GlobalKey<FormState>();
 
   //creating txt controller and use to retrieve current value of textfield.
