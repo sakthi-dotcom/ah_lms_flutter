@@ -1,12 +1,10 @@
 import "package:ah_lms/constant.dart";
-import "package:ah_lms/dashboard.dart";
 import "package:ah_lms/forgotpass.dart";
 import "package:flutter/material.dart";
-import "package:fluttertoast/fluttertoast.dart";
 import 'register.dart';
 
 void main() =>
-    runApp(MaterialApp(
+    runApp(const MaterialApp(
       home: LoginScreen(),
     ));
 
@@ -60,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 height: 250.0,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.blueAccent),
+                decoration: const BoxDecoration(color: Colors.blueAccent),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -69,10 +67,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 350.0,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
-                    Text(
+                    const Text(
                       slogan,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -82,7 +80,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Center(
@@ -99,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ).createShader(
                               const Rect.fromLTWH(0.0, 0.0, 200.0, 100.0)))),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
@@ -130,9 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.only(left: 20.0, right: 20.0),
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
                   controller: passwordController,
                   validator: (password) {
@@ -144,15 +142,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: passwordVisible,
                   obscuringCharacter: "*",
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    enabledBorder: OutlineInputBorder(
+                    border: const OutlineInputBorder(),
+                    enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blueAccent),
                     ),
-                    prefixIcon: Icon(Icons.lock_open, color: Colors.blueAccent),
+                    prefixIcon: const Icon(Icons.lock_open, color: Colors.blueAccent),
                     labelText: password,
-                    labelStyle: TextStyle(color: Colors.grey, fontSize: 13.0),
+                    labelStyle: const TextStyle(color: Colors.grey, fontSize: 13.0),
                     suffixIcon: IconButton(
                       icon: Icon(passwordVisible
                           ? Icons.visibility
@@ -170,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 alignment: Alignment.centerRight,
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPass()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgotPass()));
                   },
                   child: const Text(
                     "Forgot your Password ?",
@@ -180,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: SizedBox(
                   height: height * 0.08,
@@ -209,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Row(
@@ -223,7 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Register())
+                            MaterialPageRoute(builder: (context) => const Register())
                         );
                       },
                       child: const Text(

@@ -2,7 +2,7 @@ import "package:ah_lms/login.dart";
 import "package:flutter/material.dart";
 import "constant.dart";
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       home: Register(),
     ));
 
@@ -22,7 +22,7 @@ class _RegisterState extends State<Register> {
     passwordVisible = true;
   }
   //creating global key uniquely identify the form widget,form key allows validate the form
-  GlobalKey<FormState> _formKey =   GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey =   GlobalKey<FormState>();
 
   //creating txt controller and use to retrieve current value of textfield.
   final emailController = TextEditingController();
@@ -31,6 +31,7 @@ class _RegisterState extends State<Register> {
 
   @override
   void dispose() {
+    super.dispose();
     //clean up the controller when widget is disposed.
     nameController.dispose();
     emailController.dispose();
@@ -52,7 +53,7 @@ class _RegisterState extends State<Register> {
               Container(
                 height: 250.0,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.blueAccent),
+                decoration: const BoxDecoration(color: Colors.blueAccent),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -61,25 +62,25 @@ class _RegisterState extends State<Register> {
                       width: 350.0,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60,
               ),
               Center(
                 child: Text(
                   reg_title.toUpperCase(),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
@@ -90,7 +91,7 @@ class _RegisterState extends State<Register> {
                     }
                     return null;
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       border: OutlineInputBorder(),
                       enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
@@ -101,7 +102,7 @@ class _RegisterState extends State<Register> {
                       labelStyle: TextStyle(color: Colors.grey, fontSize: 15.0)),
                 ),
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
@@ -118,7 +119,7 @@ class _RegisterState extends State<Register> {
                     }
                     return null;
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: "abc@augustahitech.com",
                       border: OutlineInputBorder(),
                       enabledBorder: OutlineInputBorder(
@@ -130,7 +131,7 @@ class _RegisterState extends State<Register> {
                       labelStyle: TextStyle(color: Colors.grey, fontSize: 15.0)),
                 ),
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
@@ -147,14 +148,14 @@ class _RegisterState extends State<Register> {
                   obscureText: passwordVisible,
                   obscuringCharacter: "*",
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    enabledBorder: OutlineInputBorder(
+                    border: const OutlineInputBorder(),
+                    enabledBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
-                    focusedBorder: OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.blueAccent),
                     ),
                     labelText: password,
-                    labelStyle: TextStyle(color: Colors.grey, fontSize: 15.0),
+                    labelStyle: const TextStyle(color: Colors.grey, fontSize: 15.0),
                     suffixIcon: IconButton(
                       icon: Icon(passwordVisible
                           ? Icons.visibility
@@ -168,7 +169,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Center(
                 child: SizedBox(
                   height: height * 0.08,
@@ -178,7 +179,7 @@ class _RegisterState extends State<Register> {
                      if(_formKey.currentState!.validate()){
                        Navigator.push(
                            context,
-                           MaterialPageRoute(builder: (context) => LoginScreen())
+                           MaterialPageRoute(builder: (context) => const LoginScreen())
                        );
                      }
                     },
@@ -199,11 +200,11 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     routeSignin,
                     style: TextStyle(
                       color: Colors.grey,
@@ -214,9 +215,9 @@ class _RegisterState extends State<Register> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginScreen()));
+                                builder: (context) => const LoginScreen()));
                       },
-                      child: Text(
+                      child: const Text(
                         log_title,
                         style: TextStyle(color: Colors.black),
                       ))

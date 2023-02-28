@@ -2,7 +2,7 @@ import "package:ah_lms/login.dart";
 import "package:flutter/material.dart";
 import "constant.dart";
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       home: ForgotPass(),
     ));
 
@@ -38,7 +38,7 @@ class _ForgotPassState extends State<ForgotPass> {
               Container(
                 height: 250.0,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.blueAccent),
+                decoration: const BoxDecoration(color: Colors.blueAccent),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -47,23 +47,23 @@ class _ForgotPassState extends State<ForgotPass> {
                       width: 350.0,
                       color: Colors.white,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 30.0),
+              const SizedBox(height: 30.0),
               Center(
                 child: Text(
                   forgot_pass.toUpperCase(),
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                 child: TextFormField(
@@ -80,7 +80,7 @@ class _ForgotPassState extends State<ForgotPass> {
                     }
                     return null;
                   },
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       hintText: "abc@augustahitech.com",
                       border: OutlineInputBorder(),
                       enabledBorder: OutlineInputBorder(
@@ -93,7 +93,7 @@ class _ForgotPassState extends State<ForgotPass> {
                           TextStyle(color: Colors.grey, fontSize: 15.0)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30.0,
               ),
               Center(
@@ -105,7 +105,7 @@ class _ForgotPassState extends State<ForgotPass> {
                         if(formKey.currentState!.validate()){
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => LoginScreen())
+                              MaterialPageRoute(builder: (context) => const LoginScreen())
                           );
                         }
                         },
@@ -115,7 +115,7 @@ class _ForgotPassState extends State<ForgotPass> {
                           elevation: 5,
                           shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(Radius.circular(10)))),
-                      child: Text(
+                      child: const Text(
                         forgot_pass,
                         style: TextStyle(
                           color: Colors.white,
