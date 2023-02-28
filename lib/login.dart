@@ -187,14 +187,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: width - 30,
                   child: TextButton(
                     onPressed: () {
-                      if (formKey.currentState!.validate()) {
-                        Navigator.push(
-                            context, 
-                            MaterialPageRoute(
-                                builder: (context) => const Dashboard()
-                            )
-                        );
-                      }
+                      // if (formKey.currentState!.validate()) {
+                      //   Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) => const Dashboard()
+                      //       )
+                      //   );
+                      // }
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Dashboard()
+                          )
+                      );
                     },
                     style: TextButton.styleFrom(
                         backgroundColor: Colors.blueAccent,
