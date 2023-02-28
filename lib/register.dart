@@ -1,6 +1,5 @@
 import "package:ah_lms/login.dart";
 import "package:flutter/material.dart";
-import "package:fluttertoast/fluttertoast.dart";
 import "constant.dart";
 
 void main() => runApp(MaterialApp(
