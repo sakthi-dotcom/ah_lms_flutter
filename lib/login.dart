@@ -1,4 +1,5 @@
 import "package:ah_lms/constant.dart";
+import "package:ah_lms/dashboard.dart";
 import "package:ah_lms/forgotpass.dart";
 import "package:flutter/material.dart";
 import 'register.dart';
@@ -31,6 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   void dispose() {
+    super.dispose();
     //clean up the controller when widget is disposed.
     emailController.dispose();
     passwordController.dispose();
@@ -186,7 +188,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TextButton(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-
+                        Navigator.push(
+                            context, 
+                            MaterialPageRoute(
+                                builder: (context) => const Dashboard()
+                            )
+                        );
                       }
                     },
                     style: TextButton.styleFrom(
