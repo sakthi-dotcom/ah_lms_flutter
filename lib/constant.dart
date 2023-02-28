@@ -1,5 +1,6 @@
 const String appName = "LMS";
 const String bgimage = "assets/title.png";
+const String header_img = "assets/avatar.png";
 const String title = "LMS";
 const String slogan = "Welcome Back";
 const String reg_title = "Sign up";
@@ -10,3 +11,12 @@ const String mail = "Email";
 const String routeSignin = "Already have an account?";
 const String routeSignup = "Doesn't have an account?";
 const String forgot_pass = "Forgot password";
+const String app_leave = "Apply Leave";
+const String my_leave = "My Leave";
+const String lev_req =  "Leave Request";
+const String Aug_fam = "Augusta Family";
+const String holidays = "Augusta Holidays";
+const String profile = "My Profile";
+const String chg_password = "Change Password";
+const String logout = "Log out";
+
