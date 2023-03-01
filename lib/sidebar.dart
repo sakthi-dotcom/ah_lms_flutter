@@ -52,7 +52,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AugustaFamily() )
+                  MaterialPageRoute(builder: (context) => MyLeave() )
               );
             },
           ),
@@ -62,7 +62,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => AugustaHolidays() )
+                  MaterialPageRoute(builder: (context) => LeaveRequest() )
               );
             },
           ),
@@ -72,7 +72,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ChangePassword() )
+                  MaterialPageRoute(builder: (context) => AugustaFamily() )
               );
             },
           ),
@@ -82,7 +82,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LeaveRequest() )
+                  MaterialPageRoute(builder: (context) => AugustaHolidays() )
               );
             },
           ),
@@ -92,7 +92,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Logout() )
+                  MaterialPageRoute(builder: (context) => Profile() )
               );
             },
           ),
@@ -102,7 +102,7 @@ class _SideBarState extends State<SideBar> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyLeave() )
+                  MaterialPageRoute(builder: (context) => ChangePassword() )
               );
             },
           ),
@@ -114,7 +114,7 @@ class _SideBarState extends State<SideBar> {
             onTap: (){
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Profile() )
+                  MaterialPageRoute(builder: (context) => Logout() )
               );
             },
           ),
