@@ -48,7 +48,10 @@ class _SideBarState extends State<SideBar> {
                   SizedBox(
                     height: 25.0,
                   ),
-                  CircleAvatar(radius: 80.0,),
+                  CircleAvatar(
+                    radius: 80.0,
+                    backgroundImage: AssetImage('assets/avatar.png'),
+                  ),
                   SizedBox(
                     height: 10.0,
                   ),
