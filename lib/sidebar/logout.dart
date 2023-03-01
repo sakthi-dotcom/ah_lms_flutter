@@ -12,20 +12,21 @@ class Logout extends StatefulWidget {
 class _LogoutState extends State<Logout> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  Text(
-            appName
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: SideBar(),
+        appBar: AppBar(
+          title: Text(appName),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("Implemented soon....")],
+          ),
         ),
       ),
     );

@@ -12,20 +12,21 @@ class MyLeave extends StatefulWidget {
 class _MyLeaveState extends State<MyLeave> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  const Text(
-            my_leave
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: const SideBar(),
+        appBar: AppBar(
+          title: const Text(my_leave),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text("My Leave")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [Text("My Leave")],
+          ),
         ),
       ),
     );

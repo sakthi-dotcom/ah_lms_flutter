@@ -12,20 +12,21 @@ class ApplyLeave extends StatefulWidget {
 class _ApplyLeaveState extends State<ApplyLeave> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  Text(
-            app_leave
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: SideBar(),
+        appBar: AppBar(
+          title: Text(app_leave),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Apply Your leave here..")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("Apply Your leave here..")],
+          ),
         ),
       ),
     );

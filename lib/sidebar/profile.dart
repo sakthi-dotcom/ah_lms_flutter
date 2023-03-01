@@ -12,25 +12,29 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  PickedFile? _imageFile ;
+  PickedFile? _imageFile;
+
   final ImagePicker _picker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  const SideBar(),
-      appBar: AppBar(
-        title:  const Text(
-            profile
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: const SideBar(),
+        appBar: AppBar(
+          title: const Text(profile),
         ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.only(top:30.0),
-        child: ListView(
-          children: <Widget>[
-            imageProfile(),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.only(top: 30.0),
+          child: ListView(
+            children: <Widget>[
+              imageProfile(),
+            ],
+          ),
         ),
       ),
     );
@@ -40,12 +44,11 @@ class _ProfileState extends State<Profile> {
     return Center(
       child: Stack(
         children: <Widget>[
-           CircleAvatar(
-            radius: 80.0,
-            backgroundImage:_imageFile == null
-                ?const AssetImage('assets/avatar.png')
-                :FileImage(File(_imageFile!.path)) as ImageProvider
-          ),
+          CircleAvatar(
+              radius: 80.0,
+              backgroundImage: _imageFile == null
+                  ? const AssetImage('assets/avatar.png')
+                  : FileImage(File(_imageFile!.path)) as ImageProvider),
           Positioned(
             bottom: 5.0,
             right: 5.0,
@@ -58,9 +61,8 @@ class _ProfileState extends State<Profile> {
                 height: 35.0,
                 width: 35.0,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
-                    borderRadius: BorderRadius.circular(30)
-                ),
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(30)),
                 child: const Icon(
                   Icons.edit,
                   color: Colors.white,
@@ -119,9 +121,9 @@ class _ProfileState extends State<Profile> {
     );
   }
 
-  void takePhoto(ImageSource source) async{
+  void takePhoto(ImageSource source) async {
     final pickedFile = await _picker.getImage(
-        source:source,
+      source: source,
     );
     setState(() {
       _imageFile = pickedFile;

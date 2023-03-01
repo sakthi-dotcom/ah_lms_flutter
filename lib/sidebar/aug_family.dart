@@ -12,20 +12,21 @@ class AugustaFamily extends StatefulWidget {
 class _AugustaFamilyState extends State<AugustaFamily> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  const Text(
-            Aug_fam
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: SideBar(),
+        appBar: AppBar(
+          title: const Text(Aug_fam),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Augusta Family")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("Augusta Family")],
+          ),
         ),
       ),
     );

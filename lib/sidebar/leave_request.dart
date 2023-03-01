@@ -12,20 +12,21 @@ class LeaveRequest extends StatefulWidget {
 class _LeaveRequestState extends State<LeaveRequest> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  const Text(
-            lev_req
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: SideBar(),
+        appBar: AppBar(
+          title: const Text(lev_req),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text("Leave Request")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [Text("Leave Request")],
+          ),
         ),
       ),
     );

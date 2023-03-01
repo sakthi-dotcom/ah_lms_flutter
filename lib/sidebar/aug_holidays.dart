@@ -12,20 +12,21 @@ class AugustaHolidays extends StatefulWidget {
 class _AugustaHolidaysState extends State<AugustaHolidays> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      backgroundColor: Colors.white,
-      drawer:  SideBar(),
-      appBar: AppBar(
-        title:  const Text(
-            holidays
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        drawer: SideBar(),
+        appBar: AppBar(
+          title: const Text(holidays),
         ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text("Augusta Holidays")
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [Text("Augusta Holidays")],
+          ),
         ),
       ),
     );

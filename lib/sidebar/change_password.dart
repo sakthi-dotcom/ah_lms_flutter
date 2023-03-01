@@ -12,7 +12,12 @@ class ChangePassword extends StatefulWidget {
 class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return  WillPopScope(
+    onWillPop: ()
+    async {
+      return false;
+    },
+    child:Scaffold(
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
@@ -28,6 +33,7 @@ class _ChangePasswordState extends State<ChangePassword> {
           ],
         ),
       ),
+    ),
     );
   }
 }
