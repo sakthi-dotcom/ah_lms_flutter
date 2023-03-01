@@ -78,7 +78,7 @@ class _SideBarState extends State<SideBar> {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.leave_bags_at_home),
+            leading: const Icon(Icons.calendar_month_outlined),
             title: const Text(my_leave),
             onTap: () {
               Navigator.push(
@@ -86,7 +86,7 @@ class _SideBarState extends State<SideBar> {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.request_page),
+            leading: const Icon(Icons.alternate_email),
             title: const Text(lev_req),
             onTap: () {
               Navigator.push(context,
@@ -102,7 +102,7 @@ class _SideBarState extends State<SideBar> {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.holiday_village),
+            leading: const Icon(Icons.holiday_village_outlined),
             title: const Text(holidays),
             onTap: () {
               Navigator.push(context,
