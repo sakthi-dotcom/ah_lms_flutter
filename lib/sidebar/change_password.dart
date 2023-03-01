@@ -16,15 +16,15 @@ class _ChangePasswordState extends State<ChangePassword> {
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            chg_password
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
+          children: const [
+            Text("Change Password")
           ],
         ),
       ),

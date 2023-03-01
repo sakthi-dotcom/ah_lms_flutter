@@ -17,13 +17,14 @@ class _ApplyLeaveState extends State<ApplyLeave> {
       drawer:  SideBar(),
       appBar: AppBar(
         title:  Text(
-            appName
+            app_leave
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Apply Your leave here..")
           ],
         ),
       ),

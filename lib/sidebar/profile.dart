@@ -14,17 +14,17 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      drawer:  SideBar(),
+      drawer:  const SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            profile
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
+          children: const [
+            Text("Profile")
           ],
         ),
       ),

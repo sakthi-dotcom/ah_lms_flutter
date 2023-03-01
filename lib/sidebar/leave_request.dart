@@ -16,15 +16,15 @@ class _LeaveRequestState extends State<LeaveRequest> {
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            lev_req
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
+          children: const [
+            Text("Leave Request")
           ],
         ),
       ),

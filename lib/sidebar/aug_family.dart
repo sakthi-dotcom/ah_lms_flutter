@@ -16,15 +16,15 @@ class _AugustaFamilyState extends State<AugustaFamily> {
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            Aug_fam
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Implemented soon....")
+            Text("Augusta Family")
           ],
         ),
       ),

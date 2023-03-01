@@ -16,15 +16,15 @@ class _MyLeaveState extends State<MyLeave> {
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            my_leave
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
+          children: const [
+            Text("My Leave")
           ],
         ),
       ),

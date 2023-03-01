@@ -16,15 +16,15 @@ class _AugustaHolidaysState extends State<AugustaHolidays> {
       backgroundColor: Colors.white,
       drawer:  SideBar(),
       appBar: AppBar(
-        title:  Text(
-            appName
+        title:  const Text(
+            holidays
         ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Implemented soon....")
+          children: const [
+            Text("Augusta Holidays")
           ],
         ),
       ),
