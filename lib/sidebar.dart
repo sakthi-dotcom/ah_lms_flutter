@@ -1,14 +1,14 @@
 import 'package:ah_lms/view/authentication/login.dart';
 import 'package:flutter/material.dart';
 import 'constant.dart';
-import 'sidebar/apply_leave.dart';
-import 'sidebar/aug_family.dart';
-import 'sidebar/aug_holidays.dart';
-import 'sidebar/change_password.dart';
-import 'sidebar/leave_request.dart';
-import 'sidebar/logout.dart';
-import 'sidebar/my_leave.dart';
-import 'sidebar/profile.dart';
+import 'view/sidebar/apply_leave.dart';
+import 'view/sidebar/aug_family.dart';
+import 'view/sidebar/aug_holidays.dart';
+import 'view/sidebar/change_password.dart';
+import 'view/sidebar/leave_request.dart';
+import 'view/sidebar/logout.dart';
+import 'view/sidebar/my_leave.dart';
+import 'view/sidebar/profile.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({Key? key}) : super(key: key);
