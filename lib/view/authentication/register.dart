@@ -1,6 +1,6 @@
 import 'package:ah_lms/view/authentication/login.dart';
 import "package:flutter/material.dart";
-import "constant.dart";
+import '../../constant.dart';
 
 void main() => runApp(const MaterialApp(
       home: Register(),
