@@ -1,6 +1,6 @@
 import "package:ah_lms/constant.dart";
 import "package:ah_lms/dashboard.dart";
-import "package:ah_lms/forgotpass.dart";
+import 'package:ah_lms/view/authentication/forgotpass.dart';
 import "package:flutter/material.dart";
 import 'register.dart';
 
