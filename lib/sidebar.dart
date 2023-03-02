@@ -1,3 +1,4 @@
+import 'package:ah_lms/login.dart';
 import 'package:flutter/material.dart';
 import 'constant.dart';
 import 'sidebar/apply_leave.dart';
@@ -138,7 +139,7 @@ class _SideBarState extends State<SideBar> {
             ),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Logout()));
+                  context, MaterialPageRoute(builder: (context) => LoginScreen()));
             },
           ),
         ],
