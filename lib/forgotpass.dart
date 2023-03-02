@@ -38,14 +38,13 @@ class _ForgotPassState extends State<ForgotPass> {
               Container(
                 height: 250.0,
                 width: double.infinity,
-                decoration: const BoxDecoration(color: Colors.blueAccent),
+                decoration: const BoxDecoration(color: Colors.white),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.asset(
                       "assets/title.png",
-                      width: 350.0,
-                      color: Colors.white,
+                      width: 350.0
                     ),
                     const SizedBox(
                       height: 30,
