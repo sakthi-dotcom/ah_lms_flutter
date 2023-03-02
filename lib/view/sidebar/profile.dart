@@ -31,8 +31,21 @@ class _ProfileState extends State<Profile> {
         body: Padding(
           padding: const EdgeInsets.only(top: 30.0),
           child: ListView(
-            children: <Widget>[
-              imageProfile(),
+            children: [
+              Column(
+                children: [
+                  imageProfile(),
+                  SizedBox(height: 15.0),
+                  name(),
+                  SizedBox(height: 15.0,),
+                  Divider(height: 10,thickness: 2),
+                  SizedBox(height: 30.0),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50.0),
+                    child: details(),
+                  )
+                ],
+              ),
             ],
           ),
         ),
@@ -118,6 +131,56 @@ class _ProfileState extends State<Profile> {
           )
         ],
       ),
+    );
+  }
+
+  Widget name(){
+    return Column(
+      children: const [
+        Text("Sakthivel K",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0)),
+        SizedBox(height: 5.0),
+        Text("sakthivel.karunanithi@augustahitech.com",style: TextStyle(fontWeight: FontWeight.normal,fontSize: 15.0))
+      ],
+    );
+  }
+
+  Widget details(){
+    return Row(
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text("Designation",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,color: Colors.grey),textAlign: TextAlign.center,),
+            SizedBox(height: 25.0),
+            Text("Leave Balance",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,color: Colors.grey),textAlign: TextAlign.start),
+            SizedBox(height: 25.0),
+            Text("Team",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,color: Colors.grey),textAlign: TextAlign.start),
+            SizedBox(height: 25.0),
+            Text("Empoyee Id",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,color: Colors.grey),textAlign: TextAlign.start),
+            SizedBox(height: 25.0),
+            Text("Employment type",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.bold,color: Colors.grey),textAlign: TextAlign.start),
+          ],
+        ),
+        const SizedBox(width: 35),
+        Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text ("Jr.Associate",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w500,color: Colors.black)),
+            SizedBox(height: 25.0),
+            Text(" 6days",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w500,color: Colors.black),textAlign: TextAlign.center),
+            SizedBox(height: 25.0),
+            Text("Android",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w500,color: Colors.black),textAlign: TextAlign.center),
+            SizedBox(height: 25.0),
+            Text("AU0495CBE",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w500,color: Colors.black),textAlign: TextAlign.center),
+            SizedBox(height: 25.0),
+            Text("Full time",style: TextStyle(fontSize: 15.0,fontWeight: FontWeight.w500,color: Colors.black),textAlign: TextAlign.end),
+
+
+
+
+          ]
+        )
+      ],
     );
   }
 
