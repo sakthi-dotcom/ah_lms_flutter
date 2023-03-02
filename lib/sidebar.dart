@@ -1,4 +1,4 @@
-import 'package:ah_lms/login.dart';
+import 'package:ah_lms/view/authentication/login.dart';
 import 'package:flutter/material.dart';
 import 'constant.dart';
 import 'sidebar/apply_leave.dart';
