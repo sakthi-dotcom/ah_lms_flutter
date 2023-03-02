@@ -24,21 +24,8 @@ class _SideBarState extends State<SideBar> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          // UserAccountsDrawerHeader(
-          //   accountName: Text("Sakthivel K"),
-          //   accountEmail: Text("sakthivel.karunanithi@augustahitech.com"),
-          //   currentAccountPicture: CircleAvatar(
-          //     child: ClipOval(
-          //         child: Image.asset(
-          //       "assets/avatar.png",
-          //       width: 100.0,
-          //       height: 100.0,
-          //       fit: BoxFit.cover,
-          //     )),
-          //   ),
-          // ),
           Container(
-            height: 350.0,
+            height: 360.0,
             child: DrawerHeader(
               decoration: const BoxDecoration(color: Colors.white),
               child: Column(
