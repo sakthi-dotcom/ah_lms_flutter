@@ -22,10 +22,57 @@ class _ApplyLeaveState extends State<ApplyLeave> {
         appBar: AppBar(
           title: Text(app_leave),
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Text("Apply Your leave here..")],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 20, top: 20),
+                child: Text(
+                  "To:",
+                  style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey)),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blueAccent),
+                    ),
+                  ),
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 20.0, top: 10),
+                child: Text(
+                  "CC:",
+                  style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.grey),
+                ),
+              ),
+              Padding(
+                padding:
+                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                child: TextFormField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey)),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blueAccent),
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
         ),
       ),
