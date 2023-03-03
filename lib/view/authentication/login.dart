@@ -62,7 +62,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 decoration: const BoxDecoration(color: Colors.white),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Image.asset(
                       "assets/title.png",
@@ -71,13 +71,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 30,
                     ),
-                    const Text(
-                      slogan,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
-                          color: Colors.white),
-                    )
                   ],
                 ),
               ),
