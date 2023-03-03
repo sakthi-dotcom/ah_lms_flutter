@@ -64,12 +64,12 @@ class _ChangePasswordState extends State<ChangePassword> {
         child: Form(
           key: formKey,
           child: Padding(
-            padding:  EdgeInsets.only(top: 150),
+            padding:  const EdgeInsets.only(top: 150),
             child: Center(
               child: Column(
                children: [
-                  Text("Change Password",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0,color: Colors.black)),
-                 SizedBox(height: 30.0),
+                  const Text("Change Password",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0,color: Colors.black)),
+                 const SizedBox(height: 30.0),
                  Padding(
                    padding: EdgeInsets.symmetric(horizontal: 10.0),
                    child: TextFormField(
@@ -83,11 +83,11 @@ class _ChangePasswordState extends State<ChangePassword> {
                      obscureText: passwordVisible1,
                      obscuringCharacter: "*",
                      decoration:  InputDecoration(
-                       border: OutlineInputBorder(),
-                       enabledBorder: OutlineInputBorder(
+                       border: const OutlineInputBorder(),
+                       enabledBorder: const OutlineInputBorder(
                            borderSide: BorderSide(color: Colors.grey)
                        ),
-                       focusedBorder:OutlineInputBorder(
+                       focusedBorder:const OutlineInputBorder(
                          borderSide: BorderSide(color: Colors.blueAccent),
                        ),
                        suffixIcon: IconButton( icon: Icon(passwordVisible1
