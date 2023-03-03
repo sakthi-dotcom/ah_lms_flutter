@@ -70,7 +70,7 @@ class _SideBarState extends State<SideBar> {
             title: const Text(my_leave),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MyLeave()));
+                  context, MaterialPageRoute(builder: (context) => MyLeave(title: "Sakthivel K",)));
             },
           ),
           ListTile(
