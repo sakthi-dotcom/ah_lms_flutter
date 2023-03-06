@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ah_lms/sidebar.dart';
 import 'package:ah_lms/constant.dart';
 
+import '../leave_detail.dart';
+
 class MyLeave extends StatefulWidget {
   const MyLeave({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -31,9 +33,6 @@ class _MyLeaveState extends State<MyLeave> {
               return Card(
                 elevation: 8.0,
                 shape: RoundedRectangleBorder(
-                  side: const BorderSide(
-                    color: Colors.black,
-                  ),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 margin:const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
@@ -57,6 +56,12 @@ class _MyLeaveState extends State<MyLeave> {
                         Text("1d"),
                       ],
                     ),
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                        MaterialPageRoute(builder:(context) => LeaveDetail())
+                      );
+                    },
                     title: const Text(
                       "Sakthivel K",
                       style: TextStyle(
