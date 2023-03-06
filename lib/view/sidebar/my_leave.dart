@@ -21,7 +21,7 @@ class _MyLeaveState extends State<MyLeave> {
         backgroundColor: Colors.white,
         drawer: const SideBar(),
         appBar: AppBar(
-          title: const Text(my_leave),
+          title: const Text("Leave History"),
         ),
         body: ListView.builder(
             scrollDirection: Axis.vertical,
@@ -51,9 +51,9 @@ class _MyLeaveState extends State<MyLeave> {
                             ClipOval(child: Image.asset("assets/avatar.png"))),
                     trailing: Column(
                       mainAxisAlignment:MainAxisAlignment.center,
-                      children: [
-                        Text("Approved"),
-                        SizedBox(height: 5.0),
+                      children: const [
+                        Text("01/01/2023"),
+                        SizedBox(height: 20.0),
                         Text("1d"),
                       ],
                     ),
@@ -62,13 +62,16 @@ class _MyLeaveState extends State<MyLeave> {
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Row(
-                      children: const [
-                        Text(
-                          "Reason",
-                          style: TextStyle(color: Colors.black),
-                        )
-                      ],
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top:15.0),
+                      child: Row(
+                        children: const [
+                          Text(
+                            "Loss of pay",
+                            style: TextStyle(color: Colors.black),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
