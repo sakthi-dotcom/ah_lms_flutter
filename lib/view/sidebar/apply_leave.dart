@@ -11,24 +11,24 @@ class ApplyLeave extends StatefulWidget {
 }
 
 class _ApplyLeaveState extends State<ApplyLeave> {
-
   DateTime today = DateTime.now();
-  String dropdownvalue = '';
-  String dropdownvalue1 = '';
-  var items = [
-    'Earned Leave',
+  String leavedropdown = 'Earned leave';
+  var leave_items = [
+    'Earned leave',
+    'Comp -off',
+    'Permission',
     'Loss of pay',
     'Maternity',
     'Paternity',
-    'Medical Leave',
-  ];
-  var items1 = [
-    'less than 1 day',
-    'one or more than one day'
   ];
 
+  String daydropdown = "less than 1 day";
+  var count_items = ['one day or less', 'More than 1 day'];
 
-  void _onDaySelected(DateTime day, DateTime focusedDay,) {
+  void _onDaySelected(
+    DateTime day,
+    DateTime focusedDay,
+  ) {
     setState(() {
       today = day;
     });
@@ -47,14 +47,8 @@ class _ApplyLeaveState extends State<ApplyLeave> {
           title: Text(app_leave),
         ),
         body: Container(
-          height: MediaQuery
-              .of(context)
-              .size
-              .height,
-          width: MediaQuery
-              .of(context)
-              .size
-              .width,
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +65,7 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                      const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
                   child: TextFormField(
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(
@@ -94,7 +88,7 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                      const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
                   child: TextFormField(
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(
@@ -115,29 +109,30 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                         color: Colors.grey),
                   ),
                 ),
-                 Padding(
-                    padding:
-                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
                   child: DropdownButtonFormField(
-                    decoration: const InputDecoration(
+                      decoration: const InputDecoration(
                         border: OutlineInputBorder(),
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.grey)),
-                    ),
-                    value: dropdownvalue,
-                    icon: const Icon(Icons.keyboard_arrow_down),
-                    items: items.map((String items) {
-                      return DropdownMenuItem(
-                        value: items,
-                        child: Text(items),
-                      );
-                    }).toList(),
+                      ),
+                      hint: const Text(
+                        "Leave Type",
+                      ),
+                      icon: const Icon(Icons.keyboard_arrow_down),
+                      items: leave_items.map((String items) {
+                        return DropdownMenuItem(
+                          value: items,
+                          child: Text(items),
+                        );
+                      }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownvalue = newValue!;
+                          leavedropdown = newValue! as String;
                         });
-                      }
-                  ),
+                      }),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(left: 20.0, top: 10),
@@ -151,25 +146,28 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                 ),
                 Padding(
                   padding:
-                  const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
+                      const EdgeInsets.only(left: 20.0, right: 20.0, top: 10.0),
                   child: DropdownButtonFormField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey)),
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.grey)),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.blueAccent),
                       ),
-                      icon: const Icon(Icons.keyboard_arrow_down),
-                      items: items1.map((String _items) {
-                        return DropdownMenuItem(
-                          value: _items,
-                          child: Text(_items),
-                        );
-                      }).toList(),
-                      onChanged: (String? _newValue) {
-                        setState(() {
-                          dropdownvalue1 = _newValue!;
-                        });
-                      }
+                    ),
+                    icon: const Icon(Icons.keyboard_arrow_down),
+                    items: count_items.map((String c_items) {
+                      return DropdownMenuItem(
+                        value: c_items,
+                        child: Text(c_items),
+                      );
+                    }).toList(),
+                    onChanged: (String? changedValue) {
+                      setState(() {
+                        count_items = changedValue! as List<String>;
+                      });
+                    },
+                    hint: const Text("Leave duration"),
                   ),
                 ),
                 const Padding(
@@ -206,7 +204,6 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                     lastDay: DateTime.utc(2030, 3, 14),
                     onDaySelected: _onDaySelected,
                   ),
-
                 )
               ],
             ),
