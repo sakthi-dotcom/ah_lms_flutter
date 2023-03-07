@@ -1,7 +1,7 @@
 import "package:ah_lms/constant.dart";
-import "package:ah_lms/dashboard.dart";
 import 'package:ah_lms/view/authentication/forgotpass.dart';
 import "package:flutter/material.dart";
+import "../sidebar/apply_leave.dart";
 import 'register.dart';
 
 void main() =>
@@ -190,7 +190,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Dashboard()
+                              builder: (context) =>  ApplyLeave()
                           )
                       );
                     },
