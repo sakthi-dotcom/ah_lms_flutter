@@ -68,12 +68,13 @@ class _MyLeaveState extends State<MyLeave> {
                           color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Padding(
-                      padding: const EdgeInsets.only(top:15.0),
+                      padding: const EdgeInsets.only(top:5.0),
                       child: Row(
                         children: const [
                           Text(
                             "Loss of pay",
                             style: TextStyle(color: Colors.black),
+                            overflow: TextOverflow.ellipsis
                           )
                         ],
                       ),
