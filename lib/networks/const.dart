@@ -4,7 +4,3 @@ class ApiConstants{
   static String productEndpoint = 'products';
 }
 
-class productApiCons{
-  static String productBaseUrl = "https://dummyjson.com/";
-  static String productEndpoint = "products";
-}
