@@ -14,6 +14,7 @@ class InitialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       home: LoginScreen(),
+      debugShowCheckedModeBanner: false,
       theme:ThemeData(
         primaryColor: Colors.blueAccent,
       ),
