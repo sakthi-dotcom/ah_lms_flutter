@@ -26,9 +26,9 @@ class _SideBarState extends State<SideBar> {
           return AlertDialog(
             title: const Text('Logout'),
             content: const Text(
-                'Are you sure want to logout ?',
+              'Are you sure want to logout ?',
               style: TextStyle(
-                color: Colors.grey
+                  color: Colors.grey
               ),
             ),
             actions: [
@@ -39,9 +39,9 @@ class _SideBarState extends State<SideBar> {
                     Navigator.of(context).pop();
                   },
                   child: const Text(
-                      'Cancel',
+                    'Cancel',
                     style: TextStyle(
-                      color: Colors.black
+                        color: Colors.black
                     ),
                   )),
               TextButton(
@@ -110,7 +110,8 @@ class _SideBarState extends State<SideBar> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => MyLeave(
+                      builder: (context) =>
+                          MyLeave(
                             title: "Sakthivel K",
                           )));
             },
@@ -158,15 +159,17 @@ class _SideBarState extends State<SideBar> {
             },
           ),
           ListTile(
-            leading: const Icon(
-              Icons.logout,
-              color: Colors.red,
-            ),
-            title: const Text(
-              logout,
-              style: TextStyle(color: Colors.red),
-            ),
-            onTap: _isShown == true ? () => _delete(context) : null,
+              leading: const Icon(
+                Icons.logout,
+                color: Colors.red,
+              ),
+              title: const Text(
+                logout,
+                style: TextStyle(color: Colors.red),
+              ),
+              onTap: () {
+                _delete(context);
+              }
           ),
         ],
       ),
