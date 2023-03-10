@@ -169,6 +169,7 @@ class _SideBarState extends State<SideBar> {
               ),
               onTap: () {
                 _delete(context);
+
               }
           ),
         ],
