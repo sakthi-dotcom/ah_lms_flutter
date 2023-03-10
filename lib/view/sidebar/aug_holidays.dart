@@ -40,39 +40,45 @@ class _AugustaHolidaysState extends State<AugustaHolidays> {
         backgroundColor: Colors.white,
         drawer: SideBar(),
         appBar: AppBar(
-          title: const Text('REST API Example'),
+          title: const Text('Holidays List of 2023'),
         ),
-        body: dataLoaded == false || _productModel!.products.isEmpty
-          ? const Center(
-          child: CircularProgressIndicator(),
-        )
-            :ListView.builder(
-          itemCount: _productModel!.products.length,
-          itemBuilder: (context, index){
-            return Card(
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(_productModel!.products[index].id.toString()),
-                      Text(_productModel!.products[index].price.toString()),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(_productModel!.products[index].brand),
-                      Text(_productModel!.products[index].title),
-                    ],
-                  ),
-                ],
+        body: DataTable(
+          columns: const <DataColumn>[
+            DataColumn(
+              label: Expanded(
+                child: Text(
+                  'Holiday',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
               ),
-            );
-          },
+            ),
+            DataColumn(
+              label: Expanded(
+                child: Text(
+                  'Month',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+            DataColumn(
+              label: Expanded(
+                child: Text(
+                  'Date',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+            DataColumn(
+              label: Expanded(
+                child: Text(
+                  'Day',
+                  style: TextStyle(fontStyle: FontStyle.italic),
+                ),
+              ),
+            ),
+          ], rows: <DataRow>[
+
+        ],
         )
       ),
     );
