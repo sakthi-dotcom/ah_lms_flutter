@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ah_lms/sidebar.dart';
 import 'package:ah_lms/constant.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class ApplyLeave extends StatefulWidget {
   const ApplyLeave({Key? key}) : super(key: key);
@@ -11,6 +14,7 @@ class ApplyLeave extends StatefulWidget {
 }
 
 class _ApplyLeaveState extends State<ApplyLeave> {
+  double percent = 0.0;
   DateTime today = DateTime.now();
   String leavedropdown = 'Earned leave';
   var leave_items = [
@@ -53,6 +57,28 @@ class _ApplyLeaveState extends State<ApplyLeave> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: CircularPercentIndicator(
+                      radius: 90.0,
+                      lineWidth: 13.0,
+                      animation: true,
+                      percent: percent/100,
+                        center: const Text(
+                          "6d",
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black),
+                        ),
+                      backgroundColor: Colors.grey,
+                      circularStrokeCap: CircularStrokeCap.round,
+                      progressColor: Colors.blue,
+                    ),
+                  ),
+                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 20, top: 20),
                   child: Text(
