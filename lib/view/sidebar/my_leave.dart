@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ah_lms/sidebar.dart';
 import '../../networks/api_service.dart';
 import '../../networks/model.dart';
-import '../common_ui/leave_detail.dart';
+import '../leave_detail.dart';
 
 class MyLeave extends StatefulWidget {
   const MyLeave({Key? key, required this.title}) : super(key: key);
