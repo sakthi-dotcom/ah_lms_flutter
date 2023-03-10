@@ -94,7 +94,7 @@ class _MyLeaveState extends State<MyLeave> {
                         },
                         title: Text(
                           _productModel!.products[index].title.toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                         subtitle: Padding(
