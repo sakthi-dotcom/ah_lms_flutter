@@ -6,7 +6,6 @@ import 'view/sidebar/aug_family.dart';
 import 'view/sidebar/aug_holidays.dart';
 import 'view/sidebar/change_password.dart';
 import 'view/sidebar/leave_request.dart';
-import 'view/sidebar/logout.dart';
 import 'view/sidebar/my_leave.dart';
 import 'view/sidebar/profile.dart';
 
@@ -18,6 +17,47 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> {
+  bool _isShown = true;
+
+  void _delete(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (BuildContext ctx) {
+          return AlertDialog(
+            title: const Text('Logout'),
+            content: const Text(
+                'Are you sure want to logout ?',
+              style: TextStyle(
+                color: Colors.grey
+              ),
+            ),
+            actions: [
+
+              TextButton(
+                  onPressed: () {
+                    // Close the dialog
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text(
+                      'Cancel',
+                    style: TextStyle(
+                      color: Colors.black
+                    ),
+                  )),
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
+                  child: const Text(
+                    'Yes',
+                    style: TextStyle(color: Colors.blueAccent),
+                  )),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -46,9 +86,7 @@ class _SideBarState extends State<SideBar> {
                   Center(
                     child: Text(
                       "Sakthivel K",
-                      style: TextStyle(
-                        color: Colors.grey
-                      ),
+                      style: TextStyle(color: Colors.grey),
                     ),
                   )
                 ],
@@ -70,7 +108,11 @@ class _SideBarState extends State<SideBar> {
             title: const Text(my_leave),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MyLeave(title: "Sakthivel K",)));
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MyLeave(
+                            title: "Sakthivel K",
+                          )));
             },
           ),
           ListTile(
@@ -124,10 +166,7 @@ class _SideBarState extends State<SideBar> {
               logout,
               style: TextStyle(color: Colors.red),
             ),
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => LoginScreen()));
-            },
+            onTap: _isShown == true ? () => _delete(context) : null,
           ),
         ],
       ),
