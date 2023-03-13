@@ -14,7 +14,7 @@ class ApplyLeave extends StatefulWidget {
 }
 
 class _ApplyLeaveState extends State<ApplyLeave> {
-  double percent = 0.0;
+  double percent = 7.0;
   DateTime today = DateTime.now();
   String leavedropdown = 'Earned leave';
   var leave_items = [
@@ -62,10 +62,9 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                   child: Align(
                     alignment: Alignment.center,
                     child: CircularPercentIndicator(
-                      radius: 90.0,
-                      lineWidth: 13.0,
-                      animation: true,
-                      percent: percent/100,
+                      radius: 100.0,
+                      lineWidth: 15.0,
+                      percent: 0.6,
                         center: const Text(
                           "6d",
                           style: TextStyle(
